@@ -1,0 +1,8 @@
+- name: Install Python3 Libraries
+  hosts: all
+  tasks:
+    - name: Install libraries
+      pip:
+        name: "{{ item.name }}"
+        virtualenv: "{{ item.venv|default('/var/lib/awx/venv/ansible') }}"
+      loop: "{{ python3_libraries }}"
