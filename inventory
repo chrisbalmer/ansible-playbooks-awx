@@ -1,0 +1,7 @@
+all:
+  hosts:
+    localhost:
+      ansible_connection: local
+      op_version: 1.8.0
+      python3_libraries:
+        - name: git+https://github.com/vmware/vsphere-automation-sdk-python.git
